@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class CharacterSelection : MonoBehaviour
 {
-    public GameObject[] Players;
+    //public GameObject[] Players;
 
     public GameObject buyButton, playButton;//FreeImg;
     public GameObject buyPopUp, UnsufficentCoinsForPlayerselection;
@@ -22,7 +22,7 @@ public class CharacterSelection : MonoBehaviour
         //Advertisements.Instance.Initialize ();
         //PlayerPrefs.DeleteAll();
         Index = 0;
-        Players[Index].gameObject.SetActive(true);
+        //  Players[Index].gameObject.SetActive(true);
         CoinText.text = PlayerPrefs.GetInt("coin", 0).ToString();
         TotalCoins = PlayerPrefs.GetInt("coin", 0);
         //		PlayerPrefs.DeleteAll ();
@@ -38,9 +38,9 @@ public class CharacterSelection : MonoBehaviour
     {
         if (Index > 0)
         {
-            Players[Index].gameObject.SetActive(false);
+            //  Players[Index].gameObject.SetActive(false);
             Index--;
-            Players[Index].gameObject.SetActive(true);
+            // Players[Index].gameObject.SetActive(true);
             PlayerPrefs.SetInt("Player", Index);
             PlayerPrefs.Save();
             showcarINFO();
@@ -51,9 +51,9 @@ public class CharacterSelection : MonoBehaviour
     {
         if (Index < 4)
         {
-            Players[Index].gameObject.SetActive(false);
+            // Players[Index].gameObject.SetActive(false);
             Index++;
-            Players[Index].gameObject.SetActive(true);
+            // Players[Index].gameObject.SetActive(true);
             PlayerPrefs.SetInt("Player", Index);
             PlayerPrefs.Save();
             showcarINFO();
