@@ -30,7 +30,7 @@ public class OutfitChanger : MonoBehaviour
         bodyPart.sprite = options[currentIndex];
         if (SecondArm != null)
         {
-            bodyPart.sprite = options[currentIndex];
+            SecondArm.sprite = options[currentIndex];
         }
     }
 
@@ -44,7 +44,7 @@ public class OutfitChanger : MonoBehaviour
         bodyPart.sprite = options[currentIndex];
         if (SecondArm != null)
         {
-            bodyPart.sprite = options[currentIndex];
+            SecondArm.sprite = options[currentIndex];
         }
     }
 
@@ -52,5 +52,9 @@ public class OutfitChanger : MonoBehaviour
     {
         currentIndex = Random.Range(0, options.Count - 1);
         bodyPart.sprite = options[currentIndex];
+        if (SecondArm != null)
+        {
+            SecondArm.sprite = options[currentIndex];
+        }
     }
 }

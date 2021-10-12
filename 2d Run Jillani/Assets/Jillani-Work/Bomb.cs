@@ -14,7 +14,10 @@ public class Bomb : MonoBehaviour
             gameObject.GetComponent<SpriteRenderer>().enabled = false;
 
             gameObject.transform.GetChild(0).gameObject.SetActive(true);
-            gameObject.transform.GetChild(0).GetComponent<ParticleSystem>().Play();
+            if (collision.gameObject.name == "Bomb(Clone)")
+            {
+                gameObject.transform.GetChild(0).GetComponent<ParticleSystem>().Play();
+            }
         }
     }
 }

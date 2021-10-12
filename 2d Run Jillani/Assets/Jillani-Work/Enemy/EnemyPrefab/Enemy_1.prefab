@@ -24,11 +24,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 25313203}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.96, y: 0.02, z: 0}
+  m_LocalPosition: {x: 0.96, y: -0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4636430232857916}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1011771097534992
 GameObject:
@@ -57,11 +57,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1011771097534992}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.08, y: -0.75, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 2}
+  m_LocalPosition: {x: -0.08, y: 0.55, z: 0}
+  m_LocalScale: {x: 4, y: 4, z: 2}
   m_Children: []
   m_Father: {fileID: 4636430232857916}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &212744368344650436
 SpriteRenderer:
@@ -103,7 +103,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 10
-  m_Sprite: {fileID: 21300000, guid: d27323a9c55990849bbe9e662532157e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0f3140360a814c042b2140c4d21991f1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -124,7 +124,7 @@ Animator:
   m_GameObject: {fileID: 1011771097534992}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 27bd6c71eb10cf449b7abbdb1bd8074b, type: 2}
+  m_Controller: {fileID: 9100000, guid: 0301986294a3a174e87b611fbeeed454, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -140,7 +140,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1011771097534992}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
@@ -150,7 +150,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 7.89, y: 8.25}
+    oldSize: {x: 0.27, y: 0.25}
     newSize: {x: 7.89, y: 8.25}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -189,7 +189,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4636430232857916}
-  m_RootOrder: 3
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &61803182866691260
 BoxCollider2D:
@@ -14545,12 +14545,12 @@ Transform:
   m_LocalPosition: {x: 11.28, y: -1.204, z: -9}
   m_LocalScale: {x: 0.2, y: 0.2, z: 1}
   m_Children:
-  - {fileID: 4113934863318250}
   - {fileID: 4210297651036146}
-  - {fileID: 4095848110780347773}
   - {fileID: 4158716131199266}
+  - {fileID: 4095848110780347773}
   - {fileID: 489468581023749775}
   - {fileID: 25313204}
+  - {fileID: 4113934863318250}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -19508,7 +19508,7 @@ Transform:
   - {fileID: 4700152144160192}
   - {fileID: 4981110955876290}
   m_Father: {fileID: 4636430232857916}
-  m_RootOrder: 0
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!198 &198430115925376774
 ParticleSystem:
@@ -29185,7 +29185,7 @@ Transform:
   - {fileID: 8033680115989059308}
   - {fileID: 8121359073282570623}
   m_Father: {fileID: 4636430232857916}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &489468580914927110
 SpriteRenderer:
@@ -34941,8 +34941,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8185607365669431751}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: -0.9, y: 0.236, z: 0}
-  m_LocalScale: {x: 0.7, y: 0.7, z: 1}
+  m_LocalPosition: {x: 0.21, y: 0.21063587, z: 0}
+  m_LocalScale: {x: 0.5, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 8185607365048214724}
   m_RootOrder: 5
@@ -34987,7 +34987,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: ae381e2d251a86e469c6f75f08c2c350, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 821f9e72e659210458961c0cd5e16d4f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

@@ -16,7 +16,7 @@ public class PrefabSpawner : MonoBehaviour
     private void Start()
     {
         //startTime = Time.time;
-        //Invoke("InsBird", 5f);
+        Invoke("InsBird", 1f);
     }
 
     private void InsBird()
