@@ -18,6 +18,6 @@ public class CharacterCreationMenu : MonoBehaviour
 
     public void SaveCharacter()
     {
-        PrefabUtility.SaveAsPrefabAsset(character, "Assets/NewPlayer1.prefab");
+        PrefabUtility.SaveAsPrefabAsset(character, "Assets/MyPlayer.prefab");
     }
 }

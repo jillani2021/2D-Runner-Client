@@ -19,7 +19,7 @@ public class GAME_PAUSE : MonoBehaviour
     public void PauseBtnClick()
     {
         //isPaused = true;
-      Time.timeScale = 0;
+        Time.timeScale = 0;
         Debug.Log("CHALLLLLLLLLLLLLLLLLLLLLLLLLLLLL");
     }
 
@@ -28,6 +28,5 @@ public class GAME_PAUSE : MonoBehaviour
         //isPaused = false;
         Time.timeScale = 1;
         Debug.Log("CHALLLLLLLLLLLLLLLLLLLLLLLLLLLLL");
-
     }
 }

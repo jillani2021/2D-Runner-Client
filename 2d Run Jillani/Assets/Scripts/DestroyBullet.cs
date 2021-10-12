@@ -5,7 +5,7 @@ using UnityEngine;
 public class DestroyBullet : MonoBehaviour
 {
     public AudioSource Blast;
-    public Animator enemyAnimator;
+    public Animator enemy8bitAnimator;
 
     // Use this for initialization
     private void Start()
@@ -33,18 +33,21 @@ public class DestroyBullet : MonoBehaviour
 
             if (col.gameObject.name != "Bomb(Clone)")
             {
+                enemy8bitAnimator = col.gameObject.transform.GetChild(2).GetComponent<Animator>();
+                enemy8bitAnimator.SetTrigger("Die");
                 GameObject.Find("Canvas").GetComponent<KilledEnemyCounter>().UpdateKilledEnemyCount();
-                col.gameObject.transform.GetChild(2).GetComponent<BoxCollider2D>().enabled = false;
                 col.gameObject.transform.GetChild(0).gameObject.SetActive(true);
-                enemyAnimator = col.gameObject.GetComponent<Animator>();
+
+                col.gameObject.transform.GetChild(1).GetComponent<BoxCollider2D>().enabled = false;
+                // enemyAnimator = col.gameObject.GetComponent<Animator>();
                 Blast.Play();
-                enemyAnimator.SetTrigger("Die");
-                Destroy(col.gameObject);
+                // enemyAnimator.SetTrigger("Die");
+                Destroy(col.gameObject, 0.5f);
             }
             else
             {
                 // col.gameObject.GetComponent<BoxCollider2D>().enabled = false;
-                Destroy(col.gameObject);
+                Destroy(col.gameObject, 0.5f);
             }
         }
     }

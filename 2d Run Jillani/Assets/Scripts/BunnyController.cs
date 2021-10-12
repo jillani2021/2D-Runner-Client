@@ -32,12 +32,15 @@ public class BunnyController : MonoBehaviour
     //public Animator cameraAnimator;
     public static BunnyController instance;
 
+    public Animator player8bitAnimator;
+    public AudioSource gameOverSound;
+
     // Use this for initialization
     private void Start()
     {
         isGun = false;
         isSheild = false;
-
+        player8bitAnimator.SetTrigger("Run");
         myRigidBody = GetComponent<Rigidbody2D>();
         // myAnim = GetComponent<Animator>();
         myCollider = GetComponent<Collider2D>();
@@ -303,8 +306,13 @@ public class BunnyController : MonoBehaviour
     {
         if (!isSheild && (!isSpeedyArrows) /*&& isGameContinue == false*/)
         {
+            isGameOver = true;
+            Debug.Log("game over bool: " + isGameOver);
             Debug.Log("GameOver Things trigger: " + isSheild + " And speedy Arrow var: " + isSpeedyArrows);
             CameraShake.isShake = true;
+            player8bitAnimator.SetTrigger("Die");
+            //player8bitAnimator.gameObject.transform.position = new Vector3(transform.position.x, -2.6f, transform.position.z);
+
             //GameObject TemporaryEnemyObj = GameObject.Find("Enemy_1(Clone)");
             //if (TemporaryEnemyObj != null)
             //{
@@ -353,9 +361,8 @@ public class BunnyController : MonoBehaviour
             //            myCollider.enabled = false;
             //   collision.gameObject.GetComponent<PolygonCollider2D>().enabled = false;
 
-            deathSfx.Play();
+            //  deathSfx.Play();
             // collision.gameObject.SetActive(false);
-            isGameOver = true;
             float currentBestScore = PlayerPrefs.GetFloat("BestScore", 0);
             float currentScore = Time.time - startTime;
             StartCoroutine(GameOverPanelWithDelay());
@@ -384,6 +391,8 @@ public class BunnyController : MonoBehaviour
     {
         yield return new WaitForSeconds(1.5f);
         GameOverPanel.gameObject.SetActive(true);
+        gameOverSound.Play();
+
         //foreach (GameObject enemObj in GameObject.FindObjectsOfType<GameObject>())
         //{
         //    if (enemObj.name == "Enemy_1(Clone)")

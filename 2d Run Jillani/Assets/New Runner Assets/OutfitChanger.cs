@@ -7,6 +7,8 @@ public class OutfitChanger : MonoBehaviour
     [Header("Sprite To Change")]
     public SpriteRenderer bodyPart;
 
+    public SpriteRenderer SecondArm;
+
     [Space]
     [Header("No. of Options")]
     public List<Sprite> options;
@@ -26,6 +28,10 @@ public class OutfitChanger : MonoBehaviour
             currentIndex = 0;
         }
         bodyPart.sprite = options[currentIndex];
+        if (SecondArm != null)
+        {
+            bodyPart.sprite = options[currentIndex];
+        }
     }
 
     public void OnPreviousBtnClick()
@@ -36,6 +42,10 @@ public class OutfitChanger : MonoBehaviour
             currentIndex = options.Count - 1;
         }
         bodyPart.sprite = options[currentIndex];
+        if (SecondArm != null)
+        {
+            bodyPart.sprite = options[currentIndex];
+        }
     }
 
     public void Randomize()

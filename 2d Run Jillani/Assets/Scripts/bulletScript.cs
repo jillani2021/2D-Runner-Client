@@ -34,8 +34,8 @@ public class bulletScript : MonoBehaviour
                 if (isFire && !BunnyController.isGameOver)
                 {
                     fireSfx.Play();
-                    charAnimator = GameObject.Find("Ninja").GetComponent<Animator>();
-                    charAnimator.SetBool("IsFire", isFire);
+                    // charAnimator = GameObject.Find("Ninja").GetComponent<Animator>();
+                    //   charAnimator.SetBool("IsFire", isFire);
                     StartCoroutine(BulletSpawnDelay());
                     //  isFire = false;
                     //charAnimator.SetBool("IsFire", isFire);
@@ -56,7 +56,7 @@ public class bulletScript : MonoBehaviour
 
     private void CharAnimation()
     {
-        charAnimator.SetBool("IsFire", false);
+        // charAnimator.SetBool("IsFire", false);
     }
 
     private IEnumerator BulletSpawnDelay()
