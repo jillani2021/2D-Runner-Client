@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 265588365}
   - component: {fileID: 265588366}
   m_Layer: 0
-  m_Name: left
+  m_Name: leftLeg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 999446547}
   - component: {fileID: 999446548}
   m_Layer: 0
-  m_Name: Right
+  m_Name: RightLeg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

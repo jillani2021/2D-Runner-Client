@@ -6,6 +6,9 @@ using UnityEditor;
 public class CharacterCreationMenu : MonoBehaviour
 {
     public GameObject character;
+
+    [Space]
+    [Header("Ref Sprite of Every Body Part")]
     public List<OutfitChanger> outfitChangers = new List<OutfitChanger>();
 
     public void RandomizeCharacter()
@@ -14,10 +17,5 @@ public class CharacterCreationMenu : MonoBehaviour
         {
             changer.Randomize();
         }
-    }
-
-    public void SaveCharacter()
-    {
-        //PrefabUtility.SaveAsPrefabAsset(character, "Assets/MyPlayer.prefab");
     }
 }
