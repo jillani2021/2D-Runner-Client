@@ -6,7 +6,7 @@ public class Bomb : MonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Player" && !BunnyController.isSheild && (!BunnyController.isSpeedyArrows))
+        if (collision.gameObject.tag == "Player"/* && !BunnyController.isSheild && (!BunnyController.isSpeedyArrows)*/)
         {
             CameraShake.isShake = true;
 
@@ -16,7 +16,7 @@ public class Bomb : MonoBehaviour
             gameObject.transform.GetChild(0).gameObject.SetActive(true);
             if (collision.gameObject.name == "Bomb(Clone)")
             {
-                gameObject.transform.GetChild(0).GetComponent<ParticleSystem>().Play();
+                gameObject.transform.GetChild(1).GetComponent<ParticleSystem>().Play();
             }
         }
     }

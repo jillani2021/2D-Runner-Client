@@ -31,13 +31,15 @@ public class DestroyBullet : MonoBehaviour
 
             col.gameObject.GetComponent<PolygonCollider2D>().enabled = false;
 
-            if (col.gameObject.name != "Bomb(Clone)")
+            if (col.gameObject.name == "Enemy_1(Clone)")
             {
-                col.gameObject.transform.GetChild(1).GetComponent<BoxCollider2D>().enabled = false;
-                enemy8bitAnimator = col.gameObject.transform.GetChild(2).GetComponent<Animator>();
+                // col.gameObject.transform.GetChild(1).GetComponent<BoxCollider2D>().enabled = false;
+                //this play animation
+                enemy8bitAnimator = col.gameObject.transform.GetChild(0).GetComponent<Animator>();
                 enemy8bitAnimator.SetTrigger("Die");
                 GameObject.Find("Canvas").GetComponent<KilledEnemyCounter>().UpdateKilledEnemyCount();
-                col.gameObject.transform.GetChild(0).gameObject.SetActive(true);
+                //this play particle
+                col.gameObject.transform.GetChild(1).gameObject.SetActive(true);
 
                 // enemyAnimator = col.gameObject.GetComponent<Animator>();
                 Blast.Play();
@@ -46,8 +48,13 @@ public class DestroyBullet : MonoBehaviour
             }
             else
             {
+                //this play particle
+                col.gameObject.transform.GetChild(1).gameObject.SetActive(true);
+                //this False Character Sprite
+                col.gameObject.transform.GetChild(0).gameObject.SetActive(false);
+
                 // col.gameObject.GetComponent<BoxCollider2D>().enabled = false;
-                Destroy(col.gameObject);
+                Destroy(col.gameObject, 0.5f);
             }
         }
     }
