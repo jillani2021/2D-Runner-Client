@@ -12,4 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22cec8938a6491c40aaa6551c500a0f8, type: 3}
   m_Name: Characters
   m_EditorClassIdentifier: 
-  characterBodyPartsForSave: []
+  characterBodyPartsForSave: 
+  HeadPartSave: 0000000000000000000000
+  LegsPartSave: 
+  ShirtPartsave: 
+  ArmsPartsave: 
+  AccessoriesPartsave: 
+  WeponsPartsave: 0000000000
+  EyesPartsave: 

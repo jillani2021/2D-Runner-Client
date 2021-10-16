@@ -2,6 +2,7 @@
 using UnityEngine.UI;
 using System.Collections;
 using UnityEngine.AI;
+using UnityEngine.SceneManagement;
 
 public class ButtonScript : MonoBehaviour
 {
@@ -53,14 +54,14 @@ public class ButtonScript : MonoBehaviour
     {
         if (gameObject.name == "Play")
         {
-            Application.LoadLevel(1);
+            SceneManager.LoadScene("PlayerSelection");
             Time.timeScale = 1;
             BunnyController.isGameOver = false;
         }
         else if (gameObject.name == "Home")
         {
             AudioListener.pause = false;
-            Application.LoadLevel(0);
+            SceneManager.LoadScene("Home");
             //			AdManager.showAdMob ();
             // Time.timeScale = 1;
             BunnyController.isGameOver = false;
@@ -82,7 +83,7 @@ public class ButtonScript : MonoBehaviour
         else if (gameObject.name == "Retry")
         {
             BunnyController.isGameOver = false;
-            Application.LoadLevel(Application.loadedLevel);
+            SceneManager.LoadScene("Game");
             Time.timeScale = 1;
         }
         else if (gameObject.name == "Yes")

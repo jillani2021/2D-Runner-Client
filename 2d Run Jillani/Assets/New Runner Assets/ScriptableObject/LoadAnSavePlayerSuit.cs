@@ -17,35 +17,35 @@ public class LoadAnSavePlayerSuit : MonoBehaviour
     private void Awake()
     {
         //this can load saved suit and Call When Scene loaded
-        if (characterSave.characterBodyPartsForSave.Count == 8)// 7 is the last index of this list
-        {
-            i = 0;
+        //if (characterSave.characterBodyPartsForSave.Count == 8)// 7 is the last index of this list
+        //{
+        //    i = 0;
 
-            foreach (SpriteRenderer bodyPart in InGameCharBodyParts)
-            {
-                bodyPart.sprite = characterSave.characterBodyPartsForSave[i];
-                i++;
-            }
-        }
+        //    foreach (SpriteRenderer bodyPart in InGameCharBodyParts)
+        //    {
+        //        bodyPart.sprite = characterSave.characterBodyPartsForSave[i];
+        //        i++;
+        //    }
+        //}
     }
 
     // This function can save character suits and call on Btn click
     public void SaveCharacter()
     {
-        if (characterSave.characterBodyPartsForSave == null)
-        {
-            foreach (SpriteRenderer bodyPart in InGameCharBodyParts)
-            {
-                characterSave.characterBodyPartsForSave.Add(bodyPart.sprite);
-            }
-        }
-        else
-        {
-            characterSave.characterBodyPartsForSave.Clear();
-            foreach (SpriteRenderer bodyPart in InGameCharBodyParts)
-            {
-                characterSave.characterBodyPartsForSave.Add(bodyPart.sprite);
-            }
-        }
+        //if (characterSave.characterBodyPartsForSave == null)
+        //{
+        //    foreach (SpriteRenderer bodyPart in InGameCharBodyParts)
+        //    {
+        //        characterSave.characterBodyPartsForSave.Add(bodyPart.sprite);
+        //    }
+        //}
+        //else
+        //{
+        //    characterSave.characterBodyPartsForSave.Clear();
+        //    foreach (SpriteRenderer bodyPart in InGameCharBodyParts)
+        //    {
+        //        characterSave.characterBodyPartsForSave.Add(bodyPart.sprite);
+        //    }
+        //}
     }
 }
